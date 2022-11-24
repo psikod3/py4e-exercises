@@ -53,11 +53,11 @@ url = input('Enter - ')
 html = urlopen(url, context=ctx).read()
 soup = BeautifulSoup(html, "html.parser")
 
-# Retrieve all of the anchor tags
-tags = soup('a')
-for tag in tags:
-    # Look at the parts of a tag
-    print('TAG:', tag)
-    print('URL:', tag.get('href', None))
-    print('Contents:', tag.contents[0])
-    print('Attrs:', tag.attrs)
+# Retrieve span content
+spans = soup('span')
+content_list = []
+for span in spans:
+    # print('Contents:', span.contents[0])
+    content_list.append(int(span.contents[0]))
+
+print(sum(content_list))
