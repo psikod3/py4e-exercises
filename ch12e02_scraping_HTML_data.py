@@ -17,17 +17,10 @@ find all the <span> tags in the file and pull out the numbers from the tag and s
 code provided. It shows how to find all of a certain kind of tag, loop through the tags and extract the various
 aspects of the tags.
 
-...
-# Retrieve all of the anchor tags
-tags = soup('a')
-for tag in tags:
-   # Look at the parts of a tag
-   print 'TAG:',tag
-   print 'URL:',tag.get('href', None)
-   print 'Contents:',tag.contents[0]
-   print 'Attrs:',tag.attrs
-You need to adjust this code to look for span tags and pull out the text content of the span tag, convert them to integers and add them up to complete the assignment.
-Sample Execution
+... # Retrieve all of the anchor tags tags = soup('a') for tag in tags: # Look at the parts of a tag print 'TAG:',
+tag print 'URL:',tag.get('href', None) print 'Contents:',tag.contents[0] print 'Attrs:',tag.attrs You need to adjust
+this code to look for span tags and pull out the text content of the span tag, convert them to integers and add them
+up to complete the assignment. Sample Execution
 
 $ python3 solution.py
 Enter - http://py4e-data.dr-chuck.net/comments_42.html
