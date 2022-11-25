@@ -69,6 +69,8 @@ s.party()
 
 print('===================== Inheritance =========================')
 
+# from party import PartyAnimal
+
 class CricketFan(PartyAnimal_3):
     points = 0
 
@@ -82,6 +84,7 @@ s = PartyAnimal_3("Sally")
 s.party()
 j = CricketFan("Jim")
 j.party()
+print(' >>> quick pause before j.six()')
 j.six()
 print(dir(j))
 

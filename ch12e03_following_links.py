@@ -1,5 +1,5 @@
 # To run this, download the BeautifulSoup zip file
-# http://www.py4e.com/code3/bs4.zip
+# bs4.zip
 # and unzip it in the same directory as this file
 
 # py ch12e03_following_links.py
