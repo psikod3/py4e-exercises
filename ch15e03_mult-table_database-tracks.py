@@ -124,12 +124,12 @@ for entry in all:
     print(name, artist, album, genre)
 
     # because we set names to be UNIQUE we need to add IGNORE so python won't blow up
-    # INSER OR IGNORE is SQLite syntax, won't work in other SQLs
+    # INSERT OR IGNORE is SQLite syntax, won't work in other SQLs
     cur.execute('INSERT OR IGNORE INTO Artist (name) VALUES ( ? )', (artist,))
     cur.execute('SELECT id FROM Artist WHERE name = ? ', (artist,))
     artist_id = cur.fetchone()[0]
 
-    cur.execute('INSERT OR IGNORE INTO Album (title, artist_id) VALUES ( ?, ? )', (album, artist_id))
+    cur.execute("INSERT OR IGNORE INTO Album (title, artist_id) VALUES ( ?, ? )", (album, artist_id))
     cur.execute('SELECT id FROM Album WHERE title = ? ', (album,))
     album_id = cur.fetchone()[0]
 

@@ -6,7 +6,6 @@ loop to find the most prolific committer. """
 
 # py ch09e04_dictionaries.py
 
-
 fname = input("Enter file name: ")
 if len(fname) < 1:
     fname = "mbox-short.txt"
